@@ -4,6 +4,10 @@ import org.codehaus.groovy.runtime.typehandling.NumberMath
  * @author songgl
  * @since 2016-05-23 19:54
  */
+
+//时间转换日期
+println Date.parse('yyyy-MM-dd hh:MM:SS', '2012-12-11 00:00:00').format('yyyyMMdd');
+
 //range
 def range = 0..5
 println range.class;
