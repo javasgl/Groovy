@@ -5,8 +5,11 @@ import org.codehaus.groovy.runtime.typehandling.NumberMath
  * @since 2016-05-23 19:54
  */
 
-//时间转换日期
+//date format 
 println Date.parse('yyyy-MM-dd hh:MM:SS', '2012-12-11 00:00:00').format('yyyyMMdd');
+
+//timestamp to date
+println new Date(1490944975L*1000).format('yyyy-MM-dd');
 
 //range
 def range = 0..5
