@@ -5,11 +5,30 @@ import org.codehaus.groovy.runtime.typehandling.NumberMath
  * @since 2016-05-23 19:54
  */
 
+def doc1=[
+    // 'startSellTime':1490944975,
+    'isMainly':0
+];
+score=0;
+if(doc1.containsKey("startSellTime")&&doc1["startSellTime"].value>0){ 
+    score = new Date((long)(doc1["startSellTime"].value)*1000).format("yyyyMMdd");
+    //时间戳毫秒,所以 *1000
+};
+if(doc1.containsKey("isMainly")&&doc1["isMainly"].value>0){
+    score+=0.1;
+}
+println score;
+
 //date format 
 println Date.parse('yyyy-MM-dd hh:MM:SS', '2012-12-11 00:00:00').format('yyyyMMdd');
 
 //timestamp to date
 println new Date(1490944975L*1000).format('yyyy-MM-dd');
+
+score =  new Date(1490944975L*1000).format('yyyyMMdd');
+println score;
+score+=0.1;
+println score;
 
 //range
 def range = 0..5
