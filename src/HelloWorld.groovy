@@ -5,6 +5,10 @@ import org.codehaus.groovy.runtime.typehandling.NumberMath
  * @since 2016-05-23 19:54
  */
 
+//当年第几周 w: week in year
+//当月第几周 W: week in month
+println new Date((long)1490944975000).format('yyyyw');
+
 def doc1=[
     // 'startSellTime':1490944975,
     'isMainly':0
